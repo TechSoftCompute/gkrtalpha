@@ -1,0 +1,99 @@
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=12306 thr=3065834352 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-03 15:06:37.912 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+#############<User:0x96b4ac8>
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+{"a":1}
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+{"a":1}
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+{"a":1}
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+{"a":1}
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+{"a":1}

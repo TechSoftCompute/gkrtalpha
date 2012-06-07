@@ -1,0 +1,51 @@
+.page-header
+  %h2{style:"width:90%;float:left;"}
+    - if current_user.blank? 
+      .heading= "Trending Products"
+    - else
+      .heading= "Your List"
+      .links
+        =link_to "All Items","/products?category=all"
+        - @categories.each do |c|
+          = link_to c.name,"/products?category=#{c.name.downcase}"
+        = link_to " + Add List","#categoryModal","data-toggle"=> "modal"
+  = link_to "Expand List","#",:style=>"float:right;float:left;" unless current_user
+.clearfix
+#ca-container.ca-container
+  .ca-wrapper
+    - @favourite_products.each do |p|
+      .ca-item
+        - image = p.image_url.blank? ? "thumb.gif" : p.image_url(:thumb)
+        .ca_product_details
+          .ca_product_image
+            = link_to(image_tag(image,size:'280x200'),"#myModal#{p.id}","data-toggle"=> "modal" )
+          .ca_product
+            %p.title= truncate(p.name,:length=>15)
+            %p.like= p.liked_percentage 
+            %p.price $ #{p.price}
+            %p.likebutton{class: "product_#{p.id}"}
+              %a.unlike{href:"#",:onclick=>"like(this,'disliked');return false;"} -
+              %a.like{href:"#",:onclick=>"like(this,'liked');return false;"} +
+.clearfix
+.page-header
+  %h2 
+    .heading= current_user.blank? ? "Item Feed" : "Your Items"
+    .links
+      Organize by 
+      -{"Date"=>"created_at","Name"=>"name","lowest Price"=>"lowest_price","Highest Price"=>"highest_price"}.each do |link,v|
+        = link_to link,"/products?order=#{v}",:onclick=>"$('step').attr('data-order',v)"
+%ul.thumbnails#products
+  = render 'products' 
+%p#step{rel:"1",order:"created_at"}
+
+  = link_to t('.new', :default => t("helpers.links.new")),new_product_path,:class => 'btn btn-primary' if current_user && current_user.email == "gaju.mca@hotmail.com"
+#modals
+  = render 'modal'
+.modal.hide.fade.in{id:"categoryModal",style:"z-index:2000;width:none"}
+  .modal-header
+    %button.close{"data-dismiss" => "modal",style:"color:#000"} ×
+  .modal-body
+    =render 'categories/form'
+  %script
+    $('#ca-container').contentcarousel();
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

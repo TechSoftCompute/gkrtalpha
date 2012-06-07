@@ -1,0 +1,18 @@
+/ = devise_error_messages!
+.form
+	%h2.heading-label Sign in
+	= form_for(resource, :as => resource_name, :url => session_path(resource_name),:validate=>true) do |f|
+		.control-group
+			= f.label :email
+			.controls= f.email_field :email
+		.control-group
+			= f.label :password
+			.controls= f.password_field :password
+		- if devise_mapping.rememberable?
+			.control-group
+				.controls
+					= f.label :remember_me
+					= f.check_box :remember_me
+		.control-group
+			.controls= f.submit "Sign in",:class=>"btn btn-warning"
+	= render :partial => "devise/shared/links"

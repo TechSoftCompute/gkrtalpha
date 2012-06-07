@@ -1,0 +1,16 @@
+- @products.each do |p|
+	- image = p.image_url.blank? ? "thumb.gif" : p.image_url(:thumb)
+	%li.span3
+		.product_image
+			= link_to(image_tag(image,size:'242x268'),"#myModal#{p.id}","data-toggle"=> "modal" )
+		.product
+			%p.title= truncate(p.name,:length=>15)
+			%p.like= p.liked_percentage
+			%p.price $ #{p.price}
+			%p.likebutton{class: "product_#{p.id}"}
+				%a.unlike{href:"#",:onclick=>"like(this,'disliked');return false;"} -
+				%a.like{href:"#",:onclick=>"like(this,'liked');return false;"} +
+		- if current_user && current_user.email == "gaju.mca@hotmail.com"
+			%a{href:"#{edit_product_path(p)}"}	
+				%i.icon-edit
+

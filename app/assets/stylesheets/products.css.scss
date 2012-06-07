@@ -1,0 +1,91 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.field_with_errors{
+	.message{width:450px;float: right;color:red;}
+}
+.thumbnails{
+	margin-left:-14px;
+	padding:0px!important;
+	li {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border: 1px solid #D4D4D4;
+    padding: 5px;
+    margin-left:  15px;
+  } 
+}
+.product_details{
+	/*background: none repeat scroll 0 0 #F3F3F3;*/
+  border: 1px solid #D4D4D4;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5px;
+  margin-left:  15px;
+}
+.product_image{
+	text-align:center;
+	height:268px;width:242px;
+}
+.product{
+	background: #000;
+	opacity: 0.5;
+	color:#FAFAFA;
+	overflow: auto;
+  margin-left: 0px;
+  margin-top: -50px;
+  overflow: auto;
+  position: absolute;
+  width: 242px;
+	p{
+		margin : 5px;
+		float:left;font-size:12px;
+		text-align:left;
+	}
+	p.like,p.likebutton{
+		float:right;
+		text-align:right;
+		width:40px;
+	}
+	.like{
+		color:#FFB405;
+	}
+	.likebutton{
+		a{
+			color:#FFF;
+		}
+	}
+	.title,.price{width:120px;}
+}
+.span3{width:242px;}
+.modal{width:500px;bottom:10px!important;}
+.modal-body{
+	max-height:none;
+	padding: 15px 0px 0px 0px;
+}
+.description{
+	text-align:left;
+}
+#add_to_cart{
+	background:url('add_to_cart.png');
+	height: 32px;
+  width: 105px;
+}
+#buy_btn{
+	height: 32px;
+  width: 64px;
+  background:url('buy_btn.png');	
+}
+.shoping{
+	a{
+		float:left;
+    line-height: 30px;
+    margin-left: 3px;
+	}
+}
+.fb-like{
+	span{
+	width:200px!important;
+	}	
+}
+.modal-body{
+	max-width:485px;
+}

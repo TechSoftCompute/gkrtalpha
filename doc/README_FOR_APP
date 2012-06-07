@@ -1,0 +1,42 @@
+Use this README file to introduce your application and point to useful places in the API for learning more.
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+
+
+Installation guide:
+
+1.bundle install
+
+2.rake db:create
+3.rake db:migrate and
+
+
+4.Don't forget to give your mail credentials in config/environments/development.rb
+
+config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'localhost:3000',
+    :user_name            => 'indranil.since87@gmail.com',
+    :password             => '*********',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+
+    }
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+Mine is there now.
+
+5.Also change config/initializer/devise.rb
+
+config.mailer_sender = "indranil.since87@gmail.com" >> to ur email id
+
+
+6.rails s .
+
+use 3000 port only
+
+you will see the project running on localhost.
+http://localhost:3000

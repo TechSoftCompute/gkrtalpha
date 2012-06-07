@@ -1,0 +1,6 @@
+= form_for @comment,:html=>{:onsubmit=>"if($.trim($(this).children('.field').children('#comment_body').attr('value')).length > 0)$.ajax({url:'/comments/',method:'POST',data: $(this).serialize()});$(this).children('.field').children('#comment_body').attr('value','');return false;"} do |f|
+  .field
+    = f.text_area :body,:rows=>"1",style:"height:20px;"
+    = f.hidden_field :product_id,:value=>p.id
+    = f.hidden_field :creator_id,:value=>current_user.id
+    = f.submit 'Comment',:class=>"btn btn-warning"

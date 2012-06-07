@@ -1,0 +1,501 @@
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=15732 thr=67751780 file=utils.rb:176 time=2012-04-27 15:45:58.753 ]: *** Exception RuntimeError in PhusionPassenger::Rack::ApplicationSpawner (User does not respond to 'devise' method. This usually means you haven't loaded your ORM file or it's being loaded too late. To fix it, be sure to require 'devise/orm/YOUR_ORM' inside 'config/initializers/devise.rb' or before your application definition in 'config/application.rb') (process 15732, thread #<Thread:0x8139ec8>):
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:408:in `raise_no_devise_method_error!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:209:in `block in devise_for'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:205:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:205:in `devise_for'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:2:in `block in <top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `eval_block'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:260:in `draw'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:1:in `<top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `call'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `execute'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:27:in `updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:9:in `rescue in execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `run'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application.rb:136:in `initialize!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/tapanp/techsoft/bookmarklet/config/environment.rb:5:in `<top (required)>'
+	from config.ru:3:in `require'
+	from config.ru:3:in `block in <main>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `eval'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `load_rack_app'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:157:in `block in initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/utils.rb:572:in `report_app_init_status'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:154:in `initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:204:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:129:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `block (2 levels) in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `block in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `block in synchronize'
+	from <internal:prelude>:10:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/helper-scripts/passenger-spawn-server:99:in `<main>'
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=15732 thr=67751780 file=utils.rb:176 time=2012-04-27 15:46:44.176 ]: *** Exception RuntimeError in PhusionPassenger::Rack::ApplicationSpawner (User does not respond to 'devise' method. This usually means you haven't loaded your ORM file or it's being loaded too late. To fix it, be sure to require 'devise/orm/YOUR_ORM' inside 'config/initializers/devise.rb' or before your application definition in 'config/application.rb') (process 15732, thread #<Thread:0x8139ec8>):
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:408:in `raise_no_devise_method_error!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:209:in `block in devise_for'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:205:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/devise-2.0.4/lib/devise/rails/routes.rb:205:in `devise_for'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:2:in `block in <top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `eval_block'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:260:in `draw'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:1:in `<top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `call'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `execute'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:27:in `updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:9:in `rescue in execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `run'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application.rb:136:in `initialize!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/tapanp/techsoft/bookmarklet/config/environment.rb:5:in `<top (required)>'
+	from config.ru:3:in `require'
+	from config.ru:3:in `block in <main>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `eval'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `load_rack_app'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:157:in `block in initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/utils.rb:572:in `report_app_init_status'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:154:in `initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:204:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:129:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `block (2 levels) in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `block in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `block in synchronize'
+	from <internal:prelude>:10:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/helper-scripts/passenger-spawn-server:99:in `<main>'
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=16930 thr=3065879408 file=ext/nginx/HelperAgent.cpp:923 time=2012-04-27 16:11:50.682 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=16930 thr=3068676976 file=ext/nginx/HelperAgent.cpp:923 time=2012-04-27 16:11:51.941 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=17644 thr=81518440 file=utils.rb:176 time=2012-04-27 16:22:19.031 ]: *** Exception ArgumentError in PhusionPassenger::Rack::ApplicationSpawner (missing :action) (process 17644, thread #<Thread:0x9b7bed0>):
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:183:in `default_controller_and_action'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:76:in `normalize_options!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:59:in `initialize'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1302:in `new'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1302:in `add_route'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1282:in `decomposed_match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `block in match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:258:in `root'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1315:in `root'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:4:in `block in <top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `eval_block'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:260:in `draw'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:1:in `<top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `call'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `execute'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:27:in `updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `run'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application.rb:136:in `initialize!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/tapanp/techsoft/bookmarklet/config/environment.rb:5:in `<top (required)>'
+	from config.ru:3:in `require'
+	from config.ru:3:in `block in <main>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `eval'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `load_rack_app'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:157:in `block in initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/utils.rb:572:in `report_app_init_status'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:154:in `initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:204:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:129:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `block (2 levels) in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `block in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `block in synchronize'
+	from <internal:prelude>:10:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/helper-scripts/passenger-spawn-server:99:in `<main>'
+[ pid=17642 thr=3068197744 file=ext/nginx/HelperAgent.cpp:933 time=2012-04-27 16:22:19.150 ]: Uncaught exception in PassengerServer client thread:
+   exception: write() failed: Broken pipe (32)
+   backtrace:
+     in 'void Client::handleRequest(Passenger::FileDescriptor&)' (HelperAgent.cpp:828)
+     in 'void Client::threadMain()' (HelperAgent.cpp:952)
+
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+[ pid=17644 thr=81518440 file=utils.rb:176 time=2012-04-27 16:22:23.576 ]: *** Exception ArgumentError in PhusionPassenger::Rack::ApplicationSpawner (missing :action) (process 17644, thread #<Thread:0x9b7bed0>):
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:183:in `default_controller_and_action'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:76:in `normalize_options!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:59:in `initialize'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1302:in `new'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1302:in `add_route'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1282:in `decomposed_match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `block in match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1268:in `match'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:258:in `root'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/mapper.rb:1315:in `root'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:4:in `block in <top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:282:in `eval_block'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:260:in `draw'
+	from /home/tapanp/techsoft/bookmarklet/config/routes.rb:1:in `<top (required)>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `block in load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/dependencies.rb:245:in `load'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:16:in `reload!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `call'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.2.3/lib/active_support/file_update_checker.rb:78:in `execute'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:27:in `updater'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application/finisher.rb:66:in `block in <module:Finisher>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:30:in `run'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `each'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/application.rb:136:in `initialize!'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.2.3/lib/rails/railtie/configurable.rb:30:in `method_missing'
+	from /home/tapanp/techsoft/bookmarklet/config/environment.rb:5:in `<top (required)>'
+	from config.ru:3:in `require'
+	from config.ru:3:in `block in <main>'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `instance_eval'
+	from /home/tapanp/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.4.1/lib/rack/builder.rb:51:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `eval'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:225:in `load_rack_app'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:157:in `block in initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/utils.rb:572:in `report_app_init_status'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:154:in `initialize_server'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:204:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/rack/application_spawner.rb:129:in `start'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `block (2 levels) in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `block in spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `block in synchronize'
+	from <internal:prelude>:10:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/helper-scripts/passenger-spawn-server:99:in `<main>'
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+/home/tapanp/.passenger/standalone/3.0.12-x86-ruby1.9.2-linux-gcc4.5.2-1002/support/lib/phusion_passenger/platform_info/operating_system.rb:98: warning: Insecure world writable dir /var in PATH, mode 040777
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+

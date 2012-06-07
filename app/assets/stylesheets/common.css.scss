@@ -1,0 +1,64 @@
+form{margin:0px;}
+.navbar .nav > li > a {
+    padding: 5px 10px !important;
+}
+#signup {
+    background: url("/assets/join_gokrtbtn_0_33.png") no-repeat scroll right top black;
+    border-radius:5px;
+    height: 19px;
+    margin: 8px;
+    width: 78px;
+}
+#signup:hover{
+    background: url('/assets/join_gokrtbtn_0_33.png')no-repeat bottom left;
+}
+#signin,#signout {
+    border-radius: 3px 3px 3px 3px;
+    height: 21px;
+    margin: 8px;
+    width: 60px;
+}
+#search{
+    background: url('/assets/searchbtn.png')no-repeat top left;
+    border-radius: 0px 7px 7px 0px;
+    height: 28px;
+    padding: 5px 0;
+    margin: -10px 0 0 -9px;
+    width: 53px;
+}
+#search:hover{
+    background: url('/assets/searchbtn.png') no-repeat bottom left;
+}
+.links{
+     float:left;width:90%;font-size:12px;
+     a{
+        margin-left:10px;
+     }
+}
+
+.form{
+    width:400px;
+    margin:30px auto;
+    background:#F1F1F1;
+    padding:20px;border : 15px solid #F4F4F4;
+    border-radius:5px;
+    label{width:100px;float:left;}
+    .controls{margin-left:100px;}
+    .heading-label{
+        font-size:20px;
+        background:#F4F4F4;
+        margin-bottom: 20px;
+        padding-left: 100px;
+        border-radius:5px;
+    }
+}
+#error_explanation{
+    width: 650px;
+    background: #FAE3FA;
+    border: 1px solid #FCD2D7;
+    margin: 0px auto;
+    padding: 10px;
+    li{
+        color: #CB2027;
+    }
+}

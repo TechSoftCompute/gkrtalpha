@@ -1,0 +1,68 @@
+
+
+<div class="BoardLayout" id="wrapper" style="width: 1170px; visibility: visible;">
+   
+  <% @pages.each do |page| %>
+ <div style="padding-top: 20px;padding-left: 10px;padding-right: 10px; height: 200px;width: auto;" id="ColumnContainer">
+    <div data-id="<%= page.id %>" class="pin" style="float:left;">
+      <div class="PinHolder">
+        <div class="actions">
+          <div class="right">
+            <a class="Button Button11 WhiteButton" href="#">
+              <strong><em></em>Comment</strong><span></span>
+            </a>
+          </div>
+          <div class="left">
+            <a class="Button Button11 WhiteButton" href="#">
+              <strong><em></em>Repin</strong><span></span>
+            </a>
+            <a class="Button Button11 WhiteButton" href="#">
+              <strong><em></em>Like</strong><span></span>
+            </a>
+          </div>
+        </div>
+        <a class="PinImage ImgLink" href="#">
+          <img style="height: 257px;" class="PinImageImg" alt="sample" src="<%= page.image_src %>" />
+        </a>
+      </div>
+        <p class="description"><%= page.title %></p>
+      <p class="description"><%= page.cost %></p>
+      <p class="description"><%= page.description %></p>
+    
+      <p class="stats colorless">
+
+                <span class="LikesCount">
+
+                    xx likes
+
+                &nbsp;&nbsp;</span>
+
+
+
+                <span class="CommentsCount">
+
+                    xx comments
+
+                &nbsp;&nbsp;</span>
+
+
+
+                <span class="RepinsCount">
+
+                    xx repins
+
+                &nbsp;&nbsp;</span>
+
+        </p>
+        <div class="convo attribution clearfix"></div>
+        <div class="comments colormuted"></div>
+    </div>
+    </div>
+  <% end %>
+
+<div style="clear:both"></div>
+
+</div>
+<br />
+
+<%#= link_to 'New page', new_page_path %>

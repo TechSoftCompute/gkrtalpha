@@ -1,0 +1,8 @@
+-if @products.blank? 
+	$("#step").attr('rel','-1');
+-else
+
+	$("ul#products").append("#{escape_javascript(render 'products')}");
+	$("#step").attr('rel',parseInt($("#step").attr('rel')) + 1);
+	$("#modals").append("#{escape_javascript(render 'products/modal')}");
+

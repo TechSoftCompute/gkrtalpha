@@ -1,0 +1,51 @@
+- @products_for_modal.each do |p|
+  - image = p.image_url.blank? ? "thumb.gif" : p.image_url(:thumb)
+  .modal.hide.fade.in{id:"myModal#{p.id}",style:"z-index:2000;width:none;padding:10px;position:fixed;"}
+    .modal-header{style:"width:30px;padding:0;float:right;height:30px;"}
+      %button.close{"data-dismiss" => "modal",style:"color:#000;height:30px;width:30px;background:url('/assets/colosal/'cross.png') !important;"} ×
+    .modal-body
+      .product_details{style:"height:350px;width:300px;margin-left:0px;float:left;"}
+        .product_image{style:"height:350px;width:300px;"}
+          = image_tag(image,size:'350x300')
+        .product{style:"width:300px;"}
+          %p.title= truncate(p.name,:length=>15)
+          %p.like= p.liked_percentage
+          %p.price $ #{p.price}
+          %p.likebutton{class: "product_#{p.id}"}
+            %a.unlike{href:"#",:onclick=>"like(this,'disliked');return false;"} -
+            %a.like{href:"#",:onclick=>"like(this,'liked');return false;"} +
+      .social{style:"width:120px;float:right;"}
+        - unless current_user.blank?
+          .fb-like{"data-href"=>"http://gokrt.com", "data-send"=>"false", "data-layout"=>"button_count", "data-width"=>"150", "data-show-faces"=>"true",:style=>"max-width:107px;"}
+          %a{:href=>"https://twitter.com/share",:class=> "twitter-share-button", "data-url" => "http://gokrt.com","data-via"=> current_user.email} Tweet
+        .clearfix
+        = pin_it_button(:url=>"http://gokrt.com", :media=>"all", :description=>p.description)
+      .clearfix
+      %hr
+      .shoping.span3{style:"width:400px;text-align:left;"}
+        %a{href:"/cart"}
+          #add_to_cart
+        %a{href:"/buy"}
+          #buy_btn
+        =link_to 'Report Problem',"/report_problem"
+      .clearfix
+      %hr
+      .description.span3{style:"width:400px;text-align:left;"}
+        %p= p.description
+      .clearfix
+      .span3{style:"width:400px;text-align:left;min-height:100px;"}
+        =link_to "View Comments","#",class: "view_comments clearfix",style:"float:left;width:485px;",:onclick=>"$(this).next('.comments').toggle();return false;"
+        .comments.clearfix{style:"display:none;",id:"comments#{p.id}"}
+          -unless p.comments.blank?
+            - p.comments.each do |c|
+              = render 'comments/comment',:comment=>c unless c.body.blank?
+          -else
+            .clearcix
+            %p{style:"display:block"} No comments yet.
+          %hr
+          -if current_user
+            = render 'comments/form',:p => p 
+          -else
+            %p To comment on this product you need to sign in
+
+

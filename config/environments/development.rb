@@ -42,8 +42,8 @@ Bookmarklet::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'localhost:3000',
-    :user_name            => 'vivekjagan@gmail.com',
-    :password             => 'rootv2kx',
+    :user_name            => 'techsoftcomputetest@gmail.com',
+    :password             => 'test123x',
     :authentication       => 'plain',
     :enable_starttls_auto => true  
     
